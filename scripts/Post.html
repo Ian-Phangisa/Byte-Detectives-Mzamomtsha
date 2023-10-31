@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Job Vacancies</title>
+    <style>
+        body {
+          
+            background-image:url(Hiring.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: black;
+            
+        }
+
+        h1 {
+            text-align: center;
+            color: #083b66;
+            margin-top: 20px;
+        }
+
+        h2{text-align: center;
+            color:#083b66;
+
+        }
+
+        p {
+            font-size: 18px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 0; 
+            text-align: center;
+        }
+
+        li {
+            font-size: 16px;
+            margin-bottom: 10px;
+            float: right;
+            
+        }
+
+        a {
+            color: #083b66;
+            text-decoration: none;
+           
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        
+        .closing-date {
+            text-align: center;
+            font-weight: bold;
+            
+        }
+
+        .job-container-horizontal {
+            display: flex; /* Make the job containers flex items */
+            justify-content: space-between; /* Distribute them horizontally with space between */
+            flex-wrap: wrap; /* Wrap to the next row if there's not enough space */
+        }
+
+        .job-container {
+            border: 2px solid #ccc;
+            padding: 20px;
+            margin: 10px; /* Adjust margin as needed */
+            background-color: whitesmoke;
+            border-radius: 10px;
+            width: 350px;
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="navBar" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+        <img src="../pictures/logo.png" class="logo">
+        <h2 style="color: #aaa205;" id="txt">Mzamomtsha Primary School</h2>
+        <div class="nav_links" id="navlinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+            
+            <li class="active"><a href="HomePage_new.html">Home</a> </li>
+            <li><a href="About_Us.html"> About Us</a></li>
+            <li><a href="Apply.html"></i>Apply</a> </li>
+
+            <li><a href="EventSection.html"> Events</a></li>
+            <li><a href="Login.html"> Login</a></li>
+
+            <li><a href="Post.html"> Vacancy</a></li>
+            <li><a href="Final_Contact.html"> Contact Us</a></li>
+            <li><a href="NEWfaq.html"> FAQ</a></li>
+
+        </ul>
+    </div>
+    <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+                
+
+
+
+    <h1>Current Job Vacancies</h1>
+    <p>We are currently hiring for the following positions:</p>
+    <div class="job-container-horizontal">
+    <div class="job-container">
+        <h2>English teacher - Foundation phase</h2>
+        <p><small>Minimum requirement: Diploma / Bachelor's degree in English Education</small></p>
+        <p><small>Minumum of 2 years_of_experience </small></p>
+        <p>Application for the Above Mentioned closes on :  25 November 2023</p>
+
+        <p>click <a href="Vacancy.html" style="font-weight: bolds;">HERE</a> to apply</p>
+    </div>
+
+    <div class="job-container">
+        <h2>Mathematics teacher - senior phase</h2>
+        <p><small>Minimum requirement: Bachelor's degree in Mathematics Education</small></p>
+        <p><small>Minumum of 2 years_of_experience </small></p>
+        <p>Application for the Above Mentioned closes on : 30 january 2024 </p>
+
+        <p>click <a href="Vacancy.html">HERE</a> to apply</p>
+    </div>
+
+    <div class="job-container">
+        <h2>Physical Science Teacher - senior phase</h2>
+        <p><small>Bachelor's degree in Physical Science Education</small></p>
+        <p><small>Minumum of 2 years_of_experience </small></p>
+        <p>Application for the Above Mentioned closes on : 15 December </p>
+
+        <p>click <a href="Vacancy.html">HERE</a> to apply</p>
+    </div>
+
+   </div>
+   <div class="Link-info">
+    
+   
+
+
+   </div>
+   <br>
+   <br>
+</body>
+<script>
+    var navlinks=document.getElementById("navlinks");
+        function showMenu(){
+            navlinks.style.right="0";
+        }
+    
+        function hideMenu(){
+            navlinks.style.right="-200px";
+        }
+    
+
+</script>
+<script src="javascript.js"></script>
+
+
+<footer>
+    <div class="footer-container">
+        <img src="../pictures/footer.jpg" class="logo" style="width: 190px;">
+
+        <div class="school-address">
+            <p>123 Main Street, Drift Sands, Western Cape, South Africa</p>
+            <p>info@Mzamomtsha.org.za</p>
+        </div>
+
+        <div class="social-icons">
+            <!-- Add your social media links here -->
+            <h1 style="color: white;">Follow us on</h1>
+            <a href="https://www.facebook.com/yourpage" target="_blank"><i
+                    class="fab fa-facebook-square"></i></a>
+            <a href="https://twitter.com/yourhandle" target="_blank"><i
+                    class="fab fa-twitter-square"></i></a>
+            <a href="https://www.instagram.com/yourusername" target="_blank"><i
+                    class="fab fa-instagram-square"></i></a>
+
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2023 Mzamomtsha Primary School. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</html>

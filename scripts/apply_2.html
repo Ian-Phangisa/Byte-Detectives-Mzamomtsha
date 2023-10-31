@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Document2</title>
+</head>
+<style>
+  .container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 30%;
+  margin-left: 35%;
+}
+
+input[type=text], select, textarea{
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+#btn{
+  text-align: center;
+  margin-left: 50%;
+  width: 100px;
+  height: 25px;
+  border-radius: 5px;
+  color: white;
+  background-color: #083b66;
+}
+.previous{
+            background-color:#083b66 ;
+            height: 25px;
+            width: 100px;
+            color: white;
+            border-radius: 5px;
+            float: left;
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 15px;
+        }
+        .submit{
+            background-color:#083b66 ;
+            height: 25px;
+            width: 100px;
+            color: white;
+            border-radius: 5px;
+            float: right;
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 15px;
+        }
+       span {
+         color: red;
+         
+}
+          span i{
+          color: seagreen;
+          position: absolute;
+
+}
+</style>
+<body>
+  <nav class="navBar">
+    <img src="../pictures/logo.png" class="logo">
+    <h2 style="color: #aaa205;">Mzamomtsha Primary School</h2>
+    <div class="nav_links" id="navlinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+    <ul>
+        
+        <li class="active"><a href="HomePage_new.html">Home</a> </li>
+        <li><a href="About_Us.html"> About Us</a></li>
+        <li><a href="Apply.html"></i>Apply</a> </li>
+
+        <li><a href="EventSection.html"> Events</a></li>
+        <li><a href="Login.html"> Login</a></li>
+
+        <li><a href="Post.html"> Vacancy</a></li>
+        <li><a href="Final_Contact.html"> Contact Us</a></li>
+        <li><a href="NEWfaq.html"> FAQ</a></li>
+
+    </ul>
+</div>
+<i class="fa fa-bars" onclick="showMenu()"></i>
+</nav>
+<br>
+<br>
+
+    <div class="container">
+         <p style="text-align: center;">Education</p>
+        <form action="Apply.html">
+      
+          
+
+           <div id="container1"> 
+          <label for="email">Current Grade</label> 
+          <select name="grade" id="grade">
+          <option value="gradeR"> Choose Grade</option>
+          <option value="gradeR"> Grade R</option>
+          <option value="gradeR"> Grade 1</option>
+          <option value="gradeR"> Grade 2</option>
+          <option value="gradeR"> Grade 3</option>
+          <option value="gradeR"> Grade 4</option>
+          <option value="gradeR"> Grade 5</option>
+          <option value="gradeR"> Grade 6</option>
+          <option value="gradeR"> Grade 7</option>
+          <option value="gradeR"> Grade 8</option>
+          <option value="gradeR"> Grade 9</option>
+          <option value="gradeR"> Grade 10</option>
+          <option value="gradeR"> Grade 11</option>
+          <option value="gradeR"> Grade 12</option>
+        
+          </select>
+        </div>
+         
+        <div id="container1"> 
+       <label for="email">Stream to Study (only applicable for grade 9,10,11)
+       </label>
+        <select name="grade" id="grade"> 
+        <option value="gradeR"> Choose Stream </option>
+        <option value="gradeR"> Science and Mathematics Stream</option>
+        <option value="gradeR"> Commence Stream</option>
+        <option value="gradeR"> General Stream</option>
+        
+      </select>
+       </div>
+     
+      <div id="container1"> 
+    <label for="photo">Upload Your Birth Certificate:</label>       
+    <input type="file" id="birthFile" name="photo" accept="image/*" onkeyup="validateFile()">
+    <span id="fileError"></span>
+    <br>
+    <br>
+     </div>
+
+    
+     <div id="container1">
+    <label for="report">Upload Previous Report :</label>
+    <input type="file" id="reportFile" name="report" accept=".pdf,.doc,.docx">
+    <span id="fileError1"></span>
+   </div>
+
+     <br>
+    <div id="container1">
+    <p><b>Create user log-in </b></p>
+    <label for="user">Username</label>
+    <input type="text" id="username" name="username" placeholder="Your ID Number.." onkeyup=" UsernameId()">
+    <span id="username_Error"></span>
+  </div>
+
+     <div id="container1">
+    <label for="psw">Password</label>
+    <input type="password" id="password" name="password" placeholder="Your password."  onkeyup="checkPassword()" style="width: 100%;height: 35px;">
+    <span id="passwordError"></span>
+  </div>
+     
+  
+  <div id="container1">
+    <label for="psw">Confirm your password</label>
+    <input type="password" id="Confirmpassword" name="password" placeholder="Your password." onkeyup="checkPassword()" style="width: 100%;height: 35px;">
+    <span id="CpasswordError"></span>
+  </div>
+
+       
+      <br>   <br>
+         <a href="HomePage_new.html"> <div class="submit" id="submit" onclick="validateSubmit()">
+      <p>Submit</p>
+      </div>  </a>
+      
+           <a href="apply.html"><div class="previous">
+            <p>Previous</p>
+            </div></a>
+
+      
+      
+          
+      
+          
+      
+          
+      
+        </form>
+    
+      </div>
+      <br>
+      <br>
+      <footer>
+        <div class="footer-container">
+            <img src="../pictures/footer.jpg" class="logo" style="width: 190px;">
+
+            <div class="school-address">
+
+                <p>123 Main Street, Drift Sands, Western Cape, South Africa</p>
+                <p>info@Mzamomtsha.org.za</p>
+            </div>
+
+            <div class="social-icons">
+                <!-- Add your social media links here -->
+                <h1>Follow us on</h1>
+                <a href="https://www.facebook.com/yourpage" target="_blank"><i
+                        class="fab fa-facebook-square"></i></a>
+                <a href="https://twitter.com/yourhandle" target="_blank"><i
+                        class="fab fa-twitter-square"></i></a>
+                <a href="https://www.instagram.com/yourusername" target="_blank"><i
+                        class="fab fa-instagram-square"></i></a>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2023 Mzamomtsha Primary School. All rights reserved.</p>
+            </div>
+            <h1 style="margin-left: 23px;" >Chat with us</h1>
+            <a href="chatboard.html"><i></i>
+            <i class='far fa-comments' style='font-size:36px;color: white;margin-top: 200%;margin-right: 300%;' ></i> <li>
+        </div>
+      
+    </footer>
+    <script src="javascript.JS.js"></script>
+</body>
+
+</html>  

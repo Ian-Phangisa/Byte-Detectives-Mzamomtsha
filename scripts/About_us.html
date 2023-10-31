@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>AboutUs</title>
+</head>
+<style>
+    .content-About {
+        text-align: center;
+        padding: 20px;
+        background-color: white;
+        
+
+        margin: 20px;
+        
+    }
+
+    .containerAbout img {
+        height: 520px;
+        width: 620px;
+
+    }
+
+   
+
+    .containerAbout {
+        max-width: 1400px;
+        
+        margin: 0 auto;
+        
+        line-height: 1.6;
+        display: flex;
+    }
+
+
+    p {
+
+        font-size: 18px;
+    }
+
+    .para {
+
+        width: 800px;
+        margin-left: 30px;
+
+
+    }
+
+    .containerImage {
+        display: flex;
+        overflow-x: auto;
+        
+        white-space: nowrap;
+        
+        justify-content: center;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 10px;
+
+
+    }
+    .containerAbout img:hover{
+        opacity: 0.5; 
+    }
+    .containerAbout img{
+        opacity: 1.0;
+
+    }
+
+    .containerImage img {
+        flex-shrink: 0;
+        
+        margin-right: 10px;
+        
+        border-radius: 20px;
+        width: 300px;
+        margin-left: 30px;
+
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    
+    @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        #slideImage.slide-in {
+            animation: slideIn 1s ease-in-out;
+        }
+
+    /* media Responsive*/
+
+
+    @media screen and (max-width: 768px) {
+        .containerAbout img {
+            height: 120px;
+        }
+
+        .containerImage img {
+            height: 150px;
+            width: 200px;
+
+        }
+
+        .containerImage {
+            display: inline;
+        }
+    }
+    .cc{
+        display: grid;
+    }
+</style>
+
+<body>
+    <nav class="navBar" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+        <img src="../pictures/logo.png" class="logo">
+        <h2 style="color: #aaa205;" id="txt">Mzamomtsha Primary School</h2>
+        <div class="nav_links" id="navlinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+
+                <li class="active"><a href="HomePage_new.html">Home</a> </li>
+                <li><a href="About_Us.html"> About Us</a></li>
+                <li><a href="Apply.html"></i>Apply</a> </li>
+
+                <li><a href="EventSection.html"> Events</a></li>
+                <li><a href="Login.html"> Login</a></li>
+
+                <li><a href="Post.html"> Vacancy</a></li>
+                <li><a href="Final_Contact.html"> Contact Us</a></li>
+                <li><a href="NEWfaq.html"> FAQ</a></li>
+
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <br>
+
+    <section class="sec">
+
+    </section>
+
+
+    <div class=" content -About">
+
+
+        <p style="text-align: center; letter-spacing: 25px; font-size: 34px;color: #0187f0; "><strong>ABOUT US</strong></p>
+
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+        <div class="containerAbout">
+            <img id="slideImage" src="..//pictures/about.jpg">
+            <div class="cc">
+                <div class="para">
+                    <p style="text-align: left;">Mzamomtsha Primary School is located between Khayelistha Township and
+                        Umfuleni Township in the Western Cape Province of the Republic of South Africa. The schools
+                        headmaster, Mr. Simphiwe Khuze, joined in 2007. The school is located in a semi-township called
+                        Drift Sands which started off as an informal settlement. Drift Sands has since been developed and
+                        with support from the South African government it turned into a sprawling township with state of the
+                        art housing units. Mzamomtsha Primary School is plays a key role in Drift Sands and is supporting
+                        the local community.
+    
+                    </p>
+                </div>
+                <br>
+                <div class="mission_vission">
+                    <div class="para">
+                        <h3 style="color:#0187f0; font-size: 36px" >Mission</h3>
+                        <p style="text-align: justify;">Our mission is to develop students with active and creative minds, <br>
+                            a sense of understanding and compassion for others, and the courage <br>
+                            to act on their beliefs. We stress the total development of each child <br>spiritual, moral,
+                            intellectual, social, emotional, and physical.</p>
+        
+                        
+                    </div>
+                    
+                
+                    <div class="para">
+                        <h3 style="color:#0187f0; font-size: 36px;">Vision</h3>
+                       
+                        <p style="text-align: justify;">Our vision at Mzamomtsha Primary School is to empower students to
+                            acquire, <br> demonstrate, articulate and value knowledge and skills that will support them,<br>
+                            as life-long learners,to
+                            participate in and contribute to the global world and practice <br>the core values of the school:
+                            respect, tolerance & inclusion, and excellence. </p>
+        
+                        <!-- Add your mission content here -->
+                    </div>
+
+            </div>
+            
+          
+               
+    
+
+        </div>
+   
+
+
+    
+        </div>
+    </div>
+    <br>
+    <br>
+
+
+
+    <h1 style="font-size: 46px;color: #0187f0;">Meet the team</h1>
+    
+    <br>
+    <br>
+    
+    </div>
+    <div class="containerImage">
+        <div class="image1">
+            <img class="image" src="../pictures/pexels-katerina-holmes-5905483.jpg" alt="Image 1">
+            <p style="text-align: center;font-family: Arial, Helvetica, sans-serif;">Principal</p>
+
+        </div>
+
+        <div class="image1">
+            <img class="image" src="../pictures/pexels-max-fischer-5212317.jpg" alt="Image 2" ;>
+            <p style="text-align: center;font-family: Arial, Helvetica, sans-serif;"> Vice Principal</p>
+
+        </div>
+
+        <div class="image1">
+            <img class="image" src="../pictures/pexels-mikhail-nilov-6981004.jpg" alt="Image 3">
+            <p style="text-align: center;font-family: Arial, Helvetica, sans-serif;">Teacher</p>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+<br>
+<br>
+<br>
+<br>
+<!--   footer -->
+<footer>
+    <div class="footer-container">
+        <img src="../pictures/footer.jpg" class="logo" style="width: 190px;">
+
+        <div class="school-address">
+
+            <p>123 Main Street, Drift Sands, Western Cape, South Africa</p>
+            <p>info@Mzamomtsha.org.za</p>
+        </div>
+
+        <div class="social-icons">
+            <!-- Add your social media links here -->
+            <h1>Follow us on</h1>
+            <a href="https://www.facebook.com/yourpage" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter-square"></i></a>
+            <a href="https://www.instagram.com/yourusername" target="_blank"><i class="fab fa-instagram-square"></i></a>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2023 Mzamomtsha Primary School. All rights reserved.</p>
+        </div>
+        <h1 style="margin-left: 23px;">Chat with us</h1>
+        <a href="chatboard.html"><i></i>
+            <i class='far fa-comments' style='font-size:36px;color: white;margin-top: 200%;margin-right: 300%;'></i>
+            <li>
+    </div>
+
+</footer>
+<script>
+       // Function to add the "slide-in" class to the image when the page loads
+       window.addEventListener('load', function () {
+            var slideImage = document.getElementById('slideImage');
+            slideImage.classList.add('slide-in');
+        })
+
+
+</script>
+<script src="javascript.js"></script>
+
+ 
+  
+
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Event Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+           body {
+          
+            background-color:white; 
+            color: #aaa205; 
+    
+        }
+     
+
+        .previous-events {
+            margin-top: 40px;
+            text-align: center;
+            
+        }
+
+        .event-card {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .event-image {
+            flex: 1;
+            max-width: 350px;
+            margin-right: 20px;
+            box-shadow: #aaa205;
+            border-radius: 20px;
+            border-color: #aaa205;
+        }
+
+        .event-details {
+            flex: 2;
+            
+        }
+
+        .schedule {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+        }
+
+        .schedule th, .schedule td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #aaa205;
+        }
+
+        .schedule th {
+            background-color: #aaa205;
+            color: #fff;
+        }
+        /* meDIA RESPONSE*/
+        @media (max-width: 768px) {
+            .event-image{
+                max-width: 170px;
+
+            }
+            .schedule {
+            width: 70%;
+            border-collapse: collapse;
+            
+        }
+
+    
+}
+
+      
+  
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <nav class="navBar" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+        <img src="../pictures/logo.png" class="logo">
+        <h2 style="color: #aaa205;" id="txt">Mzamomtsha Primary School</h2>
+        <div class="nav_links" id="navlinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+
+                <li class="active"><a href="HomePage_new.html">Home</a> </li>
+                <li><a href="About_Us.html"> About Us</a></li>
+                <li><a href="Apply.html"></i>Apply</a> </li>
+
+                <li><a href="EventSection.html"> Events</a></li>
+                <li><a href="Login.html"> Login</a></li>
+
+                <li><a href="Post.html"> Vacancy</a></li>
+                <li><a href="Final_Contact.html"> Contact Us</a></li>
+                <li><a href="NEWfaq.html"> FAQ</a></li>
+
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+
+    <div class="container">
+        
+    </div>
+
+    <div class="previous-events">
+        <p style="text-align: center;  letter-spacing: 15px; font-size: 36PX;"> <strong>EVENTS</strong></p>
+        <div class="event-card">
+            <img src="../pictures/hlanganani-Medium-768x470.jpg" alt="Event 1" class="event-image">
+            <div class="event-details">
+                <h3>Career Day</h3>
+                <BR>
+                <p>Date: May 20, 2023</p>
+                <p >The primary purpose of a career day was to provide individuals, often students, with an opportunity to learn about various careers, industries, and professions.</p>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <img src="../pictures/Environmental wellness Day.jpg" alt="Event 2" class="event-image">
+            <div class="event-details">
+                <h3>Environmental Wellness Day</h3>
+                <BR>
+                <p>Date: September 10, 2022</p>
+                <p>The Environmental wellness day which took place at our school was meant to bring awareness to the students about the importance of keeping our Environment clean and sustained.</p>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <img src="../pictures/Awards ceremony.jpg" alt="Event 3" class="event-image">
+            <div class="event-details">
+                <h3>Awards Ceremony</h3>
+                <BR>
+                <p>Date: September 10, 2022</p>
+                <p>Our school encourages our learners through showcasing our top achievers and rewarding their hard work.</p>
+            </div>
+        </div>
+
+        
+        <h2>Upcoming Events</h2>
+        
+    </div>
+
+    <table class="schedule">
+        <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Event</th>
+        </tr>
+        <tr>
+            <td>October 15, 2023</td>
+            <td>10:00 AM - 12:00 PM</td>
+            <td>Soccer </td>
+        </tr>
+        <tr>
+            <td>November 5, 2023</td>
+            <td>2:00 PM - 4:00 PM</td>
+            <td>Upcoming Event 2</td>
+        </tr>
+        <tr>
+            <td>November 10, 2023</td>
+            <td>2:00 PM - 4:00 PM</td>
+            <td>Upcoming Event 2</td>
+        </tr>
+        <tr>
+            <td>November 25, 2023</td>
+            <td>2:00 PM - 4:00 PM</td>
+            <td>Upcoming Event 2</td>
+        </tr>
+    </table>
+    
+    <footer>
+        <div class="footer-container">
+            <img src="../pictures/footer.jpg" class="logo" style="width: 120px;">
+    
+            <div class="school-address">
+                
+                <p>123 Main Street, Drift Sands, Western Cape, South Africa</p>
+                <p>info@Mzamomtsha.org.za</p>
+            </div>
+    
+            <div class="social-icons">
+                <!-- Add your social media links here -->
+                <h1>Follow us on</h1>
+                <a href="https://www.facebook.com/yourpage" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.instagram.com/yourusername" target="_blank"><i class="fab fa-instagram-square"></i></a>
+            </div>
+    
+            <div class="copyright">
+                <p>&copy; 2023 Mzamomtsha Primary School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    var navlinks=document.getElementById("navlinks");
+        function showMenu(){
+            navlinks.style.right="0";
+        }
+    
+        function hideMenu(){
+            navlinks.style.right="-200px";
+        }
+    
+
+</script>
+<script src="javascript.js"></script>
+</html>

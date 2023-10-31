@@ -1,0 +1,324 @@
+/*navbar*/
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(../pictures/Black.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.navBar{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  #083b66;
+}
+
+.navBar img{
+    width: 100px;
+}
+.navBar h2{
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.nav_links{
+    flex: 1;
+    text-align: right;
+  
+
+}
+.nav_links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    ;
+
+
+}
+.nav_links ul li a{
+    color:white;
+    text-decoration: none;
+    font-size:13px ;
+    }
+    .nav_links ul li::after{
+        content: '';
+        width: 0%;
+        height: 2px;
+        background: red;
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+
+
+    }
+    .nav_links ul li:hover::after{
+        width: 100%;
+      
+
+    }
+    .Welcome{
+  width: 100%;
+  height: 150px;
+  bottom:200px;
+  position:absolute;
+  text-align: center;
+    }
+    .Welcome h1{
+        font-size: 62px;
+        color: #aaa205;
+    }
+    .Welcome p{
+        font-size: 30px;
+    }
+   
+
+
+
+
+
+/*About section*/
+
+.why h1 {
+    color: #aaa205;
+     font-size: 60px;
+      text-align: center;
+}
+
+
+
+
+
+
+.containerAbout {
+   
+    max-width: 1200px; 
+    margin: 0px; 
+    line-height: 1.6; /* Improve text readability */
+    display: flex;
+
+}
+.containerAbout img{
+    height: 320px;
+}
+
+
+
+.para{
+
+   width: 800px;
+   margin-left: 30px;
+
+   
+}
+.para p{
+    color:black; /* Set text color */
+    font-size: 18px;
+}
+    
+
+nav .fa{
+    display: none;
+}
+
+/* Achievement Section Styling */
+
+.picture-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.why p {
+    color: #aaa205;
+    font-size: 60px;
+    text-align: center;
+}
+
+.picture {
+    text-align: center;
+    position: relative;
+    overflow: hidden; 
+}
+
+.picture img {
+    width: 420px;
+    height: 350px;
+    transition: transform 0.3s;
+}
+
+/* Hover effect for images */
+.picture:hover img {
+    transform: scale(1.1); /* Enlarge the image on hover */
+}
+
+
+.picture p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    padding: 10px 15px;
+    opacity: 0; 
+    transition: opacity 0.3s;
+}
+
+/* Show the description on hover */
+.picture:hover p {
+    opacity: 1;
+}
+
+
+
+
+/* Footer styling */
+footer {
+    background-color: #083b66;/* Set your desired background color */
+    color: #fff; /* Set the text color */
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 80px; /* Adjust the logo size as needed */
+}
+
+.school-address {
+    flex: 1; /* Take remaining space */
+}
+
+.school-address{
+    padding-left: 10px;
+  }
+
+.copyright {
+    flex: 1; /* Take remaining space */
+}
+
+.social-icons {
+    flex: 1; /* Take remaining space */
+    text-align: center; /* Align icons to the right */
+}
+
+.social-icons a {
+    color: #fff; /* Set icon color */
+    margin-left: 10px; /* Add margin between icons */
+    font-size: 30px; /* Adjust the icon size */
+}
+
+/* Responsive styling for smaller screens */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons {
+        margin-top: 10px; /* Add margin to separate icons on smaller screens */
+        text-align: center; /* Center icons on smaller screens */
+    }
+
+    .social-icons a {
+        display: block; /* Display icons as blocks for better spacing on smaller screens */
+        margin: 5px auto; /* Center icons horizontally with some margin */
+    }
+}
+/*navbar*/
+@media screen and (max-width: 768px){
+   .why  h1{
+    font-size: 20px;
+     
+}
+.why p{
+    font-size: 20px;
+
+}
+.para p{
+   
+    font-size: 10px;
+}
+.picture-container {
+    display: inline;
+    justify-content: space-between; /* Adjust this property based on your design preferences */
+    align-items: center; /* Optional: Align items vertically in the center */
+}
+.picture img{
+    
+    height:150px;
+    width: 200px;
+
+}
+.navBar img{
+    width: 50px;
+}
+.navBar h2{
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+.nav_links ul li{
+    display: block;
+
+}
+.nav_links{
+    position: absolute;
+    background: #083b66;
+    height: 70vh;
+    width:200px ;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+}
+.containerAbout img{
+    height: 120px;
+}
+nav .fa{
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+}
+@media only screen and (max-width: 600px) {
+    /* Styles for small screens */
+    .containerAbout {
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .para {
+        font-size: 14px;
+    }
+}
+
+
+
+/*sections*/
+

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Job Application Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-image: url('Hiring.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #aaa205;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+
+        label {
+            font-weight: bold;
+            display: inline-block;
+            width: 150px; 
+            vertical-align: top;
+        }
+
+        /* Resize input fields */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #aaa205;
+            border-radius: 3px;
+        }
+
+        input[type="file"] {
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #083b66;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #083b66;
+        }
+
+        #submit-button-wrapper {
+            text-align: center;
+        }
+     
+        
+    </style>
+</head>
+
+<body>
+
+    
+
+
+    <h1>Teaching Vacancy</h1>
+    <form action="#" method="POST">
+           
+            <label for="full_name">Full Name:</label>
+            <input type="text" id="full_name" name="full_name" required><br><br>
+            
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone"><br><br>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+    
+           
+            <label for="position_applying">Position Applying For:</label>
+            <select id="position_applying" name="position_applying" required>
+                <option value="-------">---------</option>
+                <option value="eng teacher">English teacher-foundation phase</option>
+                <option value="maths teacher">Mathematics-intermediate phase</option>
+                <option value="physics">Physical Science Teacher</option>
+            </select><br><br>
+
+            <label for="years_of_experience">Years of Experience:</label>
+            <input type="number" id="years_of_experience" name="years_of_experience" min="0" required><br><br>
+
+            <label>Available Immediately:</label><br>
+            <input type="radio" id="available_immediately_yes" name="available_immediately" value="yes" required>
+            <label for="available_immediately_yes">Yes</label><br>
+            <input type="radio" id="available_immediately_no" name="available_immediately" value="no" required>
+            <label for="available_immediately_no">No</label><br><br>
+
+            <label for="resume">Resume (PDF only):</label>
+            <input type="file" id="resume" name="resume" accept=".pdf" required>
+            <p>Accepted file format: PDF</p>
+
+            <label for="certificates">Qualifications (PDF only):</label>
+            <input type="file" id="certificates" name="certificates" accept=".pdf" required>
+            <p>Accepted file format: PDF</p>
+
+            <label for="cover_letter">Cover Letter:</label>
+            <textarea id="cover_letter" name="cover_letter" rows="6" cols="50" required></textarea><br><br>
+        
+
+        <div id="submit-button-wrapper">
+            <input type="submit" value="Submit">
+            <div id="job-vacancies-link">
+                <p>Before you submit you application please visit Our advertisement page to make sure that your skills and Experience meet our hiring criteria. <a href="Post.html">View Job Vacancies</a></p>
+                
+        </div>
+    
+    </form>
+
+
+
+</body>
+
+</html>
+<script>
+    var navlinks=document.getElementById("navlinks");
+        function showMenu(){
+            navlinks.style.right="0";
+        }
+    
+        function hideMenu(){
+            navlinks.style.right="-200px";
+        }
+    
+
+</script>
+
+

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=https://maps.app.goo.gl/sWjPEuRjfcX5iKf68">
+  </script>
+  <title>Contact us</title>
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+
+  /* Style inputs */
+  input[type=text],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  input[type=submit] {
+    background-color: #083b66;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+  }
+
+  input[type=submit]:hover {
+    background-color: #083b66;
+  }
+
+  /* Style the container/contact section */
+  .container {
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px;
+  }
+
+  /* Create two columns that float next to eachother */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+    margin-left: 0px;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+
+    .column,
+    input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+  .column img {
+    border-radius: 5px;
+  }
+
+  .contact-info {
+    width: 50%;
+    display: flex;
+
+  }
+
+  .contact-info-item {
+    display: flex;
+    margin-top: 30px;
+  }
+
+  span {
+    color: black;
+
+  }
+
+  span i {
+    color: green;
+
+
+  }
+
+  .contact-info-icon {
+    height: 70px;
+    width: 70px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    margin-left: 25%;
+  }
+
+  .contact-info-icon i {
+    font-size: 55px;
+    background-color: #aaa205;
+    border-radius: 100%;
+    height: 65px;
+    width: 76px;
+    text-align: center;
+  }
+
+  .contact-info-item {
+    display: flex;
+
+    border-radius: 25px;
+
+  }
+
+  @media screen and (max-width: 768px) {
+    .column iframe {
+      width: 250px;
+      height: 300px;
+    }
+  }
+</style>
+
+<body>
+
+
+
+  <nav class="navBar">
+    <img src="../pictures/logo.png" class="logo">
+    <h2 style="color: #aaa205;">Mzamomtsha Primary School</h2>
+    <div class="nav_links" id="navlinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+    <ul>
+        
+        <li class="active"><a href="HomePage_new.html">Home</a> </li>
+        <li><a href="About_Us.html"> About Us</a></li>
+        <li><a href="Apply.html"></i>Apply</a> </li>
+
+        <li><a href="EventSection.html"> Events</a></li>
+        <li><a href="Login.html"> Login</a></li>
+
+        <li><a href="Post.html"> Vacancy</a></li>
+        <li><a href="Final_Contact.html"> Contact Us</a></li>
+        <li><a href="NEWfaq.html"> FAQ</a></li>
+
+    </ul>
+</div>
+<i class="fa fa-bars" onclick="showMenu()"></i>
+</nav>
+  <div class="containerAdd">
+    <div style="text-align:center">
+
+      <h2 style="font-style: normal;">Contact Us</h2>
+      <p style="font-style: normal;">Send Us a Message:</p>
+    </div>
+    <div class="row">
+      <div class="column">
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.580178513113!2d18.648764675714457!3d-34.00331567317553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc4f10cee25b65%3A0x67a6a93df747dbac!2sMzamomtsha%20Primary!5e0!3m2!1sen!2sza!4v1697536669495!5m2!1sen!2sza"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <br>
+        <br>
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-home"></i>
+            </div>
+
+            <div class="contact-info-content" style="width: 150px;padding-left: 10px;">
+              <h4>Address</h4>
+              <p>123 Main Street,<br /> Drift Sands, Western Cape <br />55060</p>
+            </div>
+          </div>
+
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+
+            <div class="contact-info-content" style="width: 150px;padding-left: 5px;">
+              <h4>Phone</h4>
+              <p> 021 909 0099</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+
+            <div class="contact-info-content" style="padding-left: 10px;">
+              <h4>Email</h4>
+              <p>info@Mzamomtsha.org.za</p>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+      </div>
+      <div class="column">
+        <form action="#">
+
+          <label for="fname">First Name</label>
+          <span id="fnameError" style="color: red;"></span>
+          <input type="text" id="fname" name="firstname" placeholder="Your name.." onkeyup="firstName()">
+
+
+
+          <label for="lname">Last Name</label>
+          <span id="lnameError" style="color: red;"></span>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name.." onkeyup="lastName()">
+
+
+
+          <label for="email">Email address</label>
+          <span id="enameError" style="color: red;"></span>
+          <input type="text" id="ename" name="email" placeholder="Your email address.." onkeyup="emailName()">
+
+
+          <label for="number">Mobile number</label>
+          <span id="pnameError" style="color: red;"></span>
+          <input type="text" id="pname" name="bmail" placeholder="Your mobile number.." onkeyup="mobileNumber()">
+
+
+          <label style="font-style: normal;" for="subject">Message</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"
+            onkeyup="validateMessage()" maxlength="20"></textarea>
+          <span id="MessageError"></span>
+         <a href="HomePage_new.html"> <input type="submit" value="Submit" style="padding: 10px;" onclick="return validateForm()"></a>
+
+
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="footer-container">
+      <img src="../pictures/footer.jpg" class="logo" style="width: 190px;">
+
+      <div class="school-address">
+
+        <p>123 Main Street, Drift Sands, Western Cape, South Africa</p>
+        <p>info@Mzamomtsha.org.za</p>
+      </div>
+
+      <div class="social-icons">
+        <!-- Add your social media links here -->
+        <h1>Follow us on</h1>
+        <a href="https://www.facebook.com/yourpage" target="_blank"><i class="fab fa-facebook-square"></i></a>
+        <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        <a href="https://www.instagram.com/yourusername" target="_blank"><i class="fab fa-instagram-square"></i></a>
+      </div>
+
+      <div class="copyright">
+        <p>&copy; 2023 Mzamomtsha Primary School. All rights reserved.</p>
+      </div>
+      <h1 style="margin-left: 23px;">Chat with us</h1>
+      <a href="chatboard.html"><i></i>
+        <i class='far fa-comments' style='font-size:36px;color: white;margin-top: 200%;margin-right: 300%;'></i>
+        <li>
+    </div>
+
+  </footer>
+
+
+  <script>
+    var navlinks = document.getElementById("navlinks");
+    function showMenu() {
+      navlinks.style.right = "0";
+    }
+
+    function hideMenu() {
+      navlinks.style.right = "-200px";
+    }
+
+
+
+    /* function to validate form inputa*/
+
+
+
+
+
+    var firstnameError = document.getElementById("fnameError");
+    var lastnameError = document.getElementById("lnameError");
+    var emailError = document.getElementById("enameError");
+    var mobilenumberError = document.getElementById("pnameError");
+    var MessageError = document.getElementById("MessageError");
+
+    function firstName() {
+      // Check if First Name is empty
+      var firstName = document.getElementById("fname").value;
+      if (firstName.length = 0) {
+        firstnameError.innerHTML = "Enter your First name";
+        return false;
+      }
+      else if (!firstName.match(/^[A-Za-z]/)) {
+        firstnameError.innerHTML = "Only letters are allowed";
+        return false;
+      }
+      else {
+        firstnameError.innerHTML = '<i class="fas fa-check-circle"></i>';
+        return true;
+
+      }
+
+
+
+    }
+
+    function lastName() {
+      var lastName = document.getElementById("lname").value;
+      // Check if Last Name is empty
+      if (lastName.length = 0) {
+        lastnameError.innerHTML = "Enter your First name";
+        return false;
+      }
+      else if (!lastName.match(/^[A-Za-z]/)) {
+        lastnameError.innerHTML = "only letters are allowed";
+        return false;
+      }
+      else {
+        lastnameError.innerHTML = '<i class="fas fa-check-circle"></i>';
+        return true;
+
+      }
+    }
+
+    function emailName() {
+      var email = document.getElementById("ename").value;
+      if (email.length = 0) {
+        emailError.innerHTML = "Enter your Valid Email";
+        return false;
+      }
+
+      else if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+
+        emailError.innerHTML = "invalid email";
+        return false;
+      }
+      else {
+        emailError.innerHTML = '<i class="fas fa-check-circle"></i>';
+        return true;
+      }
+
+
+    }
+    function mobileNumber() {
+      var mobileNumber = document.getElementById("pname").value;
+      if (mobileNumber.length == 0) {
+        mobilenumberError.innerHTML = 'Cellphone number is required';
+        return false;
+      }
+
+
+
+
+      else if (mobileNumber.length != 10) {
+        mobilenumberError.innerHTML = 'Cellphone number must be 10 digits';
+
+        return false;
+      }
+      else if (!mobileNumber.match(/^[0-9]{10}$/)) {
+        mobilenumberError.innerHTML = 'Numerical  values only please';
+        return false;
+      }
+
+      else if (!mobileNumber.match(/^[0][0-9]{9}$/)) {
+        mobilenumberError.innerHTML = 'Cellphone number must start with 0 ';
+        return false;
+      }
+
+
+
+
+      else {
+        mobilenumberError.innerHTML = '<i class="fas fa-check-circle"></i>';
+        return true;
+      }
+    }
+    function validateMessage() {
+      var Message = document.getElementById("subject").value;
+      const required = 20;
+      var left = required - Message.length;
+      if (left > 0) {
+        MessageError.innerHTML = left + " " + 'characters left';
+        return false;
+
+      }
+      MessageError.innerHTML = '<i class="fas fa-check-circle"></i>';
+      return true;
+    }
+
+
+
+
+
+
+
+    function validateForm() {
+
+      if (!firstName() || !lastName() || !emailName() || !mobileNumber() || !validateMessage()) {
+        alert("please fill the required field");
+        return false;
+
+      } else {
+        alert("submitted successfully! One of Our Admins will contact You.");
+        return true;
+      }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+  <script src="javascript.js"></script>
+</body>
+
+
+</html>

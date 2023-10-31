@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="script" href="javascript.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<style>
+  .container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 25%;
+  margin-left: 35%;
+  z-index: -999;
+}
+
+input[type=text], select, textarea{
+  width:100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+.next{
+            background-color:#083b66 ;
+            height: 25px;
+            width: 100px;
+            color: white;
+            border-radius: 5px;
+            float: right;
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 15px;
+           padding-bottom: -10px;
+        }
+ .container1 span{
+  color: red;
+ 
+}
+.container1 span i{
+color: seagreen;
+position: absolute;
+}
+
+</style>
+<body>
+  <nav class="navBar" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+    <img src="../pictures/logo.png" class="logo">
+    <h2 style="color: #aaa205;">Mzamomtsha Primary School</h2>
+    <div class="nav_links" id="navlinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+    <ul>
+        
+        <li class="active"><a href="HomePage_new.html">Home</a> </li>
+        <li><a href="About_Us.html"> About Us</a></li>
+        <li><a href="Apply.html"></i>Apply</a> </li>
+
+        <li><a href="EventSection.html"> Events</a></li>
+        <li><a href="Login.html"> Login</a></li>
+
+        <li><a href="Post.html"> Vacancy</a></li>
+        <li><a href="Final_Contact.html"> Contact Us</a></li>
+        <li><a href="NEWfaq.html"> FAQ</a></li>
+
+    </ul>
+</div>
+<i class="fa fa-bars" onclick="showMenu()"></i>
+</nav>
+<br>
+
+
+
+    <div class="container">
+         <p style="text-align: center;">Personal Information</p>
+        <form action="apply_2.html">
+           <div class="container1">
+          <label for="fname">Full Names</label>
+          <input type="text" id="fname" name="fullname" placeholder="Your Name and Surname.." onkeyup="validateFullname()">
+          <span id="fullnameError"></span>
+            
+        
+        </div>
+
+
+        <div class="container1">
+          <label for="Cname">Cell Phone Number</label>
+          <input type="text" id="cellphone" name="cellphone" placeholder="Your cellphone Number.." onkeyup="validatePhone()">
+          <span id="cellphoneError"></span>
+        </div>
+
+          <div class="container1">
+          <label for="email">Email <Address></Address></label>
+          <input type="text" id="email" name="email" placeholder="Your email Address.." onkeyup=" validateEmail()">
+          <span id="emailError"></span>
+        </div>
+          
+        <div class="container1">        
+          <label for="idnumber">Id Number <Address></Address></label>
+          <input type="text" id="idNumber" name="id" placeholder="Your Id Number.." onkeyup="validateId()">
+          <span id="idError"></span>
+        </div>
+
+          <legend>Choose your gender:</legend>
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="male" value="male" >
+          <label for="female">Female</label>
+          <input type="radio" name="gender" id="female" value="female"  check()>
+          <br><br>
+          <div class="container1"> 
+           <label for="textA">Physical Address</label>
+           <textarea name="textArea" id="P_address" cols="30" rows="5" onkeyup="ValidateAddress()"></textarea>
+           <span id="address_Error"></span>
+           </div>
+
+           <div class="container1"> 
+           <a href="apply_2.html" >
+            <div class="next" onclick="return validateNext()">
+            <p>Next</p>
+            <span id="next_Error"></span>
+            </div></a>
+          </div>
+
+           
+      
+        </form>
+      </div>
+      
+    
+</body>
+<br>
+<br>
+<footer>
+  <div class="footer-container">
+      <img src="../pictures/footer.jpg" class="logo" style="width: 190px;">
+
+      <div class="school-address">
+
+          <p>123 Main Street, Drift Sands, Western Cape, South Africa</p>
+          <p>info@Mzamomtsha.org.za</p>
+      </div>
+
+      <div class="social-icons">
+          <!-- Add your social media links here -->
+          <h1>Follow us on</h1>
+          <a href="https://www.facebook.com/yourpage" target="_blank"><i
+                  class="fab fa-facebook-square"></i></a>
+          <a href="https://twitter.com/yourhandle" target="_blank"><i
+                  class="fab fa-twitter-square"></i></a>
+          <a href="https://www.instagram.com/yourusername" target="_blank"><i
+                  class="fab fa-instagram-square"></i></a>
+      </div>
+
+      <div class="copyright">
+          <p>&copy; 2023 Mzamomtsha Primary School. All rights reserved.</p>
+      </div>
+      <h1 style="margin-left: 23px;" >Chat with us</h1>
+      <a href="chatboard.html"><i></i>
+      <i class='far fa-comments' style='font-size:36px;color: white;margin-top: 200%;margin-right: 300%;' ></i> <li>
+  </div>
+  
+</footer>
+<script src="javascript.js"></script>
+
+<script>
+    var loca = document.getElementById("fname").value;
+  validateFullname(loca);
+    var navlinks=document.getElementById("navlinks");
+        function showMenu(){
+            navlinks.style.right="0";
+        }
+    
+        function hideMenu(){
+            navlinks.style.right="-200px";
+        }
+    
+
+</script>
+<script src="javascript.JS.js"></script>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Mozamotsha School</title>
+</head>
+<style>
+    .button-container {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    #prevButton,
+    #nextButton {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        margin: 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+    #prevButton:hover,
+    #nextButton:hover {
+        background-color: black;
+    }
+
+    button {
+        background-color: #0074D9;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button i {
+        margin-right: 5px;
+    }
+    
+</style>
+
+<body>
+    <section class="header">
+        <nav class="navBar" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+            <img src="../pictures/logo.png" class="logo">
+            <h2 style="color: #aaa205;" id="txt">Mzamomtsha Primary School</h2>
+            <div class="nav_links" id="navlinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+
+                    <li class="active"><a href="HomePage_new.html">Home</a> </li>
+                    <li><a href="About_Us.html"> About Us</a></li>
+                    <li><a href="Apply.html"></i>Apply</a> </li>
+
+                    <li><a href="EventSection.html"> Events</a></li>
+                    <li><a href="Login.html"> Login</a></li>
+
+                    <li><a href="Post.html"> Vacancy</a></li>
+                    <li><a href="Final_Contact.html"> Contact Us</a></li>
+                    <li><a href="NEWfaq.html"> FAQ</a></li>
+
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="Welcome">
+            <marquee behavior="scroll" direction="left and right">
+                <h1 id="ss">Welcome to Mzamomtsha Primary School</h1>
+            </marquee>
+            <p style="color: white;"> Where Excellence Meets Education</p>
+            <div class="button-container">
+                <button id="prevButton" style="float:left;"><i class="fas fa-chevron-left"></i> </button>
+                <button id="nextButton" style="float: right;"><i class="fas fa-chevron-right"></i> </button>
+
+            </div>
+        </div>
+
+    </section>
+    <section>
+
+
+        <br>
+        <br>
+        <br>
+        <div class="why">
+
+            <h1>Why Mzamomtsha</h1>
+            <br>
+            <br>
+        </div>
+        <div class="containerAbout">
+            <img src="..//pictures/about.jpg">
+            <div class="para">
+                <p style="text-align: left;">Mzamomtsha Primary School is located between Khayelistha Township and
+                        Umfuleni Township in the Western Cape Province of the Republic of South Africa. The schools
+                        headmaster, Mr. Simphiwe Khuze, joined in 2007. The school is located in a semi-township called
+                        Drift Sands which started off as an informal settlement. Drift Sands has since been developed and
+                        with support from the South African government it turned into a sprawling township with state of the
+                        art housing units. Mzamomtsha Primary School is plays a key role in Drift Sands and is supporting
+                        the local community.
+            </div>
+        </div>
+
+        </div>
+    </section>
+    <br>
+    <br>
+
+
+    <!--  ACHIVEMENTS -->
+    <section>
+        <div class="why">
+            <p>
+                Recent Achivements</p>
+        </div>
+        <br>
+        <br>
+
+        <div class="picture-container">
+            <div class="picture">
+                <img src="../pictures/academic achivements.png">
+                <p> Where Excellence Meets Education</p>
+            </div>
+
+            <div class="picture">
+                <img src="../pictures/award2.jpg">
+                <p>100% Matric Pass Rate</p>
+            </div>
+            <div class="picture">
+                <img src="../pictures/sportAwards.jpg">
+                <div>
+                    <p>best in sports</p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <br>
+    <br>
+    <button onclick="topFunction()" id="myBtn" title="Back to Top" style="float: right;  color: white;">
+        <i class="fa fa-chevron-circle-up" aria-hidden="true" style="font-size: 24px;"></i>
+    </button>
+    
+    
+    
+    <br>
+    <br>
+    <br>
+    <section>
+        <!--   footer -->
+        <footer>
+            <div class="footer-container">
+                <img src="../pictures/footer.jpg" class="logo" style="width: 190px;">
+
+                <div class="school-address">
+
+                    <p>123 Main Street, Drift Sands, Western Cape, South Africa</p>
+                    <p>info@Mzamomtsha.org.za</p>
+                </div>
+
+                <div class="social-icons">
+                    <!-- Add your social media links here -->
+                    <h1>Follow us on</h1>
+                    <a href="https://www.facebook.com/yourpage" target="_blank"><i
+                            class="fab fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/yourusername" target="_blank"><i
+                            class="fab fa-instagram-square"></i></a>
+                </div>
+
+                <div class="copyright">
+                    <p>&copy; 2023 Mzamomtsha Primary School. All rights reserved.</p>
+                </div>
+                <h1 style="margin-left: 23px;">Chat with us</h1>
+                <a href="chatboard.html"><i></i>
+                    <i class='far fa-comments'
+                        style='font-size:36px;color: white;margin-top: 200%;margin-right: 300%;'></i>
+                    <li>
+            </div>
+
+        </footer>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="javascript.js"></script>
+<script>
+    
+
+
+
+
+</script>
+
+
+</html>

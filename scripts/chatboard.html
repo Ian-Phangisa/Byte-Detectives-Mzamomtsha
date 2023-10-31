@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Chatbot</title>
+    <style>
+    html{
+        background-image:url(../pictures/chatbot.jpg);
+    }
+#chat-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20%;
+
+   
+}
+
+#chat-log {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 8px;
+    margin-right: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 8px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+div {
+    margin-bottom: 8px;
+}
+
+/* Style for user messages */
+#chat-log div strong:nth-child(odd) {
+    color: #007bff;
+}
+
+/* Style for chatbot messages */
+#chat-log div strong:nth-child(even) {
+    color: #4CAF50;
+}
+
+        
+    </style>
+</head>
+<body>
+<div class="background">
+
+    <div id="chat-container">
+        <div id="chat-log"></div>
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            displayMessage("Maxa", "Hi there! How can I help you?");
+        });
+
+        function sendMessage() {
+            const userInput = document.getElementById('user-input').value;
+            displayMessage("You", userInput);
+            processUserInput(userInput);
+            document.getElementById('user-input').value = '';
+        }
+
+        function displayMessage(sender, message) {
+            const chatLog = document.getElementById('chat-log');
+            const messageElement = document.createElement('div');
+            messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
+            chatLog.appendChild(messageElement);
+        }
+
+        function processUserInput(userInput) {
+            // You can implement more sophisticated logic here
+            const response = getResponse(userInput);
+            displayMessage("Maxa", response);
+        }
+
+        function getResponse(userInput) {
+            // Simple response mapping, you can make this more complex
+            const responses = {
+                "Kunjani ":"Ni right nwina",
+                "hi": "Hi there! How can I help you?",
+                "hello": "Hi there! How can I help you?",
+                "class": "We offer a variety of classes. Please visit our website for more details.",
+                "admission": "For admission information, please check our admission page.",
+                " How do i contact you ": "You can contact us at contact@example.com or call us at +123456789.",
+                "default": "I'm sorry, I didn't understand that. Can you please rephrase? or foward your query to info@Mzamotsaha.co.za"
+            };
+
+            return responses[userInput.toLowerCase()] || responses["default"];
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>FAQ Page</title>
+    <style>
+        body {
+          
+            line-height: 1.6;
+        
+
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .faq-container {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .question {
+            color: white;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #083b66;
+        }
+
+        .answer {
+            display: none;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+            background-color: #aaa205;
+        }
+    </style>
+</head>
+
+<body>
+   
+
+    <nav class="navBar" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+        <img src="../pictures/logo.png" class="logo">
+        <h2 style="color: #aaa205;" id="txt">Mzamomtsha Primary School</h2>
+        <div class="nav_links" id="navlinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+            
+            <li class="active"><a href="HomePage_new.html">Home</a> </li>
+            <li><a href="About_Us.html"> About Us</a></li>
+            <li><a href="Apply.html"></i>Apply</a> </li>
+
+            <li><a href="EventSection.html"> Events</a></li>
+            <li><a href="Login.html"> Login</a></li>
+
+            <li><a href="Post.html"> Vacancy</a></li>
+            <li><a href="Final_Contact.html"> Contact Us</a></li>
+            <li><a href="NEWfaq.html"> FAQ</a></li>
+
+        </ul>
+    </div>
+    <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+
+
+
+
+
+    <div class="faq-container">
+        <br>
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="question" onclick="toggleAnswer('q1')">Q: WHERE CAN I BUY SCHOOL UNIFORM</div>
+        <div class="answer" id="q1">A: You can buy school uniform from the school. Please visit the school for information on uniform and prices.</div>
+
+        <div class="question" onclick="toggleAnswer('q2')">Q:IS THERE TRANSPORTATION PROVIDED BY THE SCHOOL OR LEARNERS ARE REQUIRED TO USE THEIR OWN?</div>
+        <div class="answer" id="q2">A: Sorry,the school does not provide transportation as yet but we are working towards buying a bus or taxis for learners in far distances.</div>
+
+        <div class="question" onclick="toggleAnswer('q3')">Q: WHERE CAN  I BUY  SCHOOL UNIFORM</div>
+        <div class="answer" id="q3">A: You can buy school uniform from the school. Please visit the school for information on uniform and prices.</div>
+
+        <div class="question" onclick="toggleAnswer('q4')">Q:IS THERE TRANSPORTATION PROVIDED BY THE SCHOOL OR LEARNERS ARE REQUIRED TO USE THEIR OWN?</div>
+        <div class="answer" id="q4">A: Sorry,the school does not provide transportation as yet but we are working towards buying a bus or taxis for learners in far distances.</div>
+       
+        
+
+    </div>
+
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === 'none') {
+                answer.style.display = 'block';
+            } else {
+                answer.style.display = 'none';
+            }
+        }
+        
+    var navlinks=document.getElementById("navlinks");
+        function showMenu(){
+            navlinks.style.right="0";
+        }
+    
+        function hideMenu(){
+            navlinks.style.right="-200px";
+        }
+    
+
+</script>
+<script src="javascript.js"></script>
+
+</body>
+<br>
+<br>
+<br>
+<br>
+
+<footer>
+    <div class="footer-container">
+        <img src="../pictures/footer.jpg" class="logo" style="width: 190px;">
+
+        <div class="school-address">
+
+            <p>123 Main Street, Drift Sands, Western Cape, South Africa</p>
+            <p>info@Mzamomtsha.org.za</p>
+        </div>
+
+        <div class="social-icons">
+            <!-- Add your social media links here -->
+            <h1>Follow us on</h1>
+            <a href="https://www.facebook.com/yourpage" target="_blank"><i
+                    class="fab fa-facebook-square"></i></a>
+            <a href="https://twitter.com/yourhandle" target="_blank"><i
+                    class="fab fa-twitter-square"></i></a>
+            <a href="https://www.instagram.com/yourusername" target="_blank"><i
+                    class="fab fa-instagram-square"></i></a>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2023 Mzamomtsha Primary School. All rights reserved.</p>
+        </div>
+        <h1 style="margin-left: 23px;" >Chat with us</h1>
+        <a href="test1.html">
+        <i class='far fa-comments' style='font-size:36px;color: white;margin-top: 200%;margin-right: 300%;' ></i> <li>
+    </div>
+    
+</footer>
+</html>
