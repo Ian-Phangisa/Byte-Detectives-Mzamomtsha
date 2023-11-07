@@ -9,15 +9,31 @@
 
     <title>FAQ Page</title>
     <style>
+        @keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.faq-container {
+    max-width: 600px;
+    margin: auto;
+    animation: slideIn 0.5s; /* Adjust the duration as needed */
+}
+
         body {
-          
+         
             line-height: 1.6;
-        
+            background-image: none;
+       
 
         }
 
         h2 {
             color: #333;
+            font-size: xx-large;
         }
 
         .faq-container {
@@ -28,9 +44,12 @@
         .question {
             color: white;
             cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             border: 1px solid #ddd;
             padding: 10px;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             background-color: #083b66;
         }
 
@@ -40,6 +59,21 @@
             border-top: 1px solid #ddd;
             background-color: #aaa205;
         }
+
+        .icon {
+            font-weight: bold;
+            font-size: 20px;
+            width: 20px;
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+
     </style>
 </head>
 
@@ -52,7 +86,7 @@
         <div class="nav_links" id="navlinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
         <ul>
-            
+           
             <li class="active"><a href="HomePage_new.html">Home</a> </li>
             <li><a href="About_Us.html"> About Us</a></li>
             <li><a href="Apply.html"></i>Apply</a> </li>
@@ -72,50 +106,76 @@
 
 
 
-
+    <h2 style="text-align: center; color:#aaa205;">Frequently Asked Questions</h2>
+   
 
     <div class="faq-container">
-        <br>
-        <h2>Frequently Asked Questions</h2>
-
-        <div class="question" onclick="toggleAnswer('q1')">Q: WHERE CAN I BUY SCHOOL UNIFORM</div>
-        <div class="answer" id="q1">A: You can buy school uniform from the school. Please visit the school for information on uniform and prices.</div>
-
-        <div class="question" onclick="toggleAnswer('q2')">Q:IS THERE TRANSPORTATION PROVIDED BY THE SCHOOL OR LEARNERS ARE REQUIRED TO USE THEIR OWN?</div>
-        <div class="answer" id="q2">A: Sorry,the school does not provide transportation as yet but we are working towards buying a bus or taxis for learners in far distances.</div>
-
-        <div class="question" onclick="toggleAnswer('q3')">Q: WHERE CAN  I BUY  SCHOOL UNIFORM</div>
-        <div class="answer" id="q3">A: You can buy school uniform from the school. Please visit the school for information on uniform and prices.</div>
-
-        <div class="question" onclick="toggleAnswer('q4')">Q:IS THERE TRANSPORTATION PROVIDED BY THE SCHOOL OR LEARNERS ARE REQUIRED TO USE THEIR OWN?</div>
-        <div class="answer" id="q4">A: Sorry,the school does not provide transportation as yet but we are working towards buying a bus or taxis for learners in far distances.</div>
        
-        
+        <div class="question" onclick="toggleAnswer('q1')">
+             Q: WHERE CAN I BUY SCHOOL UNIFORM?
+             <span class="icon">+</span>
+        </div>
+        <div class="answer" id="q1">A: You can buy school uniform from the school. Please visit the school for information on uniform and prices.</div>
+   
+        <div class="question" onclick="toggleAnswer('q2')">
+             Q: IS THERE TRANSPORTATION PROVIDED BY THE SCHOOL OR DO LEARNERS NEED TO PROVIDE THEIR OWN?
+             <span class="icon">+</span>
+        </div>
+        <div class="answer" id="q2">A: Sorry, the school does not provide transportation as yet, but we are working towards buying a bus or taxis for learners in far distances.</div>
+           
 
+        <div class="question" onclick="toggleAnswer('q3')">
+            Q:  Can I take my child on holiday during term time?
+            <span class="icon">+</span>
+        </div>
+        <div class="answer" id="q3">A: No , Attending school is a compulsory obligation that parents must adhere to and therefore you should avoid taking your child out of school.</div>
+   
+        <div class="question" onclick="toggleAnswer('q4')">
+            Q: What do I do if I need to see a teacher?
+            <span class="icon">+</span>
+        </div>
+        <div class="answer" id="q4">A: In order to see a teacher you must set up an appointment first by email the admin on the email address found on our website .</div>
+       
+        <div class="question" onclick="toggleAnswer('q5')">
+            Q: How do you communicate with parents?
+            <span class="icon">+</span>
+        </div>
+        <div class="answer" id="q5">A: WE communicate with parents via the contact details provided on the registration forms . we also try to reach and interact with a larger crowd on our social media platforms.</div>
+   
+
+       
+   
     </div>
+   
 
     <script>
+       
+
         function toggleAnswer(id) {
-            var answer = document.getElementById(id);
-            if (answer.style.display === 'none') {
-                answer.style.display = 'block';
-            } else {
-                answer.style.display = 'none';
-            }
+        const answer = document.getElementById(id);
+        const icon = answer.previousElementSibling.querySelector('.icon');
+
+        if (answer.style.display === 'block') {
+            answer.style.display = 'none';
+            icon.textContent = '+';
+        } else {
+            answer.style.display = 'block';
+            icon.textContent = '-';
         }
-        
-    var navlinks=document.getElementById("navlinks");
+        }
+       
+        var navlinks=document.getElementById("navlinks");
         function showMenu(){
             navlinks.style.right="0";
         }
-    
+   
         function hideMenu(){
             navlinks.style.right="-200px";
         }
-    
+   
 
-</script>
-<script src="javascript.js"></script>
+    </script>
+    <script src="javascript.js"></script>
 
 </body>
 <br>
@@ -151,6 +211,7 @@
         <a href="test1.html">
         <i class='far fa-comments' style='font-size:36px;color: white;margin-top: 200%;margin-right: 300%;' ></i> <li>
     </div>
-    
+   
 </footer>
 </html>
+

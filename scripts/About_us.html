@@ -18,12 +18,15 @@
         margin: 20px;
         
     }
+    .bounce-underline {
+  text-align: center;
+  letter-spacing: 25px;
+  font-size: 34px;
+  color: #0187f0;
+  
+  
+}
 
-    .containerAbout img {
-        height: 520px;
-        width: 620px;
-
-    }
 
    
 
@@ -49,20 +52,41 @@
 
 
     }
+   
+
 
     .containerImage {
         display: flex;
         overflow-x: auto;
+
         
-        white-space: nowrap;
-        
-        justify-content: center;
         border-radius: 10px;
         padding: 10px;
         margin-top: 10px;
 
 
     }
+    .image1 {
+   margin-left: 100PX;
+    transition: transform 0.5s;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+
+    
+
+
+
+
+
+
+
+
+
     .containerAbout img:hover{
         opacity: 0.5; 
     }
@@ -74,17 +98,36 @@
     .containerImage img {
         flex-shrink: 0;
         
-        margin-right: 10px;
+  
         
         border-radius: 20px;
         width: 300px;
-        margin-left: 30px;
+
 
     }
 
     h1 {
         text-align: center;
     }
+/*meet the team*/
+
+.image1:hover {
+    transform: scale(1.1); 
+    opacity: 0.8; 
+}
+
+.image1 {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.image1 p:hover {
+    color:blue;
+    transition: color 0.3s ease;
+}
+/* Add box shadow on hover for a lift effect */
+.image1:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a box shadow on hover */
+    background-color:#0187f0 ;
+}
 
     
     @keyframes slideIn {
@@ -96,8 +139,13 @@
             }
         }
 
-        #slideImage.slide-in {
-            animation: slideIn 1s ease-in-out;
+        /* Apply the slide-in animation to the entire body */
+        .containerAbout {
+            animation: slideIn 6s ease-in-out;
+        }
+        .bounce-underline{
+            animation: slideIn 3s ease-in-out;
+
         }
 
     /* media Responsive*/
@@ -151,12 +199,12 @@
     <section class="sec">
 
     </section>
-
+<img src="../pictures/about.jpg" style="width: 100%; height: 300px;">
 
     <div class=" content -About">
+        <div class="center-text">
 
-
-        <p style="text-align: center; letter-spacing: 25px; font-size: 34px;color: #0187f0; "><strong>ABOUT US</strong></p>
+            
 
 
 
@@ -164,9 +212,10 @@
         <br>
         <br>
         <br>
-
-
+        </div>
+        <p class="bounce-underline" ><strong>ABOUT US</strong></p>
         <div class="containerAbout">
+           
             <img id="slideImage" src="..//pictures/about.jpg">
             <div class="cc">
                 <div class="para">
@@ -232,25 +281,59 @@
     <div class="containerImage">
         <div class="image1">
             <img class="image" src="../pictures/pexels-katerina-holmes-5905483.jpg" alt="Image 1">
-            <p style="text-align: center;font-family: Arial, Helvetica, sans-serif;">Principal</p>
-
+            <p style=" text-align: center; font-family: Arial, Helvetica, sans-serif;">Mrs Maluleke</p>
+            <p style=" text-align: center; font-family: Arial, Helvetica, sans-serif;">Principal</p>
         </div>
-
+    
         <div class="image1">
-            <img class="image" src="../pictures/pexels-max-fischer-5212317.jpg" alt="Image 2" ;>
-            <p style="text-align: center;font-family: Arial, Helvetica, sans-serif;"> Vice Principal</p>
-
+            <img class="image" src="../pictures/pexels-max-fischer-5212317.jpg" alt="Image 2">
+            <p style=" text-align: center; font-family: Arial, Helvetica, sans-serif;"> Miss Brenda klein</p>
+            <p style="text-align: center; font-family: Arial, Helvetica, sans-serif;">Vice Principal</p>
         </div>
-
+    
         <div class="image1">
             <img class="image" src="../pictures/pexels-mikhail-nilov-6981004.jpg" alt="Image 3">
-            <p style="text-align: center;font-family: Arial, Helvetica, sans-serif;">Teacher</p>
-
+            <p style=" text-align: center; font-family: Arial, Helvetica, sans-serif;">Miss Du point</p>
+            <p style="text-align: center; font-family: Arial, Helvetica, sans-serif;"> HOD </p> 
         </div>
-
+        <div class="image1">
+            <img class="image" src="../pictures/teacher 1.jpeg" alt="Image 1" style="height: 460px;">
+            <p style=" text-align: center; font-family: Arial, Helvetica, sans-serif;">Miss Mazibuko</p>
+            <p style="font-family: Arial, Helvetica, sans-serif;text-align: center;">Physical Science</p>
+        </div>
+    
+        <div class="image1">
+            <img class="image" src="../pictures/SA-Teacher.jpg" alt="Image 2"  style="height: 460px;">
+            <p style=" text-align: center; font-family: Arial, Helvetica, sans-serif;">Mr Chauke</p>
+            <p style="text-align: center; font-family: Arial, Helvetica, sans-serif;">Mathematics Teacher</p>
+        </div>
+    
+        <div class="image1">
+            <img class="image" src="../pictures/india.jpeg" alt="Image 3"  style="height: 460px;">
+            <p style=" text-align: center; font-family: Arial, Helvetica, sans-serif;">Mrs Priyah Mamus</p>
+            <p style="text-align: center; font-family: Arial, Helvetica, sans-serif;">Event Organizer</p> 
+        </div>
+        <div class="image1">
+            <img class="image" src="../pictures/coach.webp" alt="Image 1"  style="height: 460px;">
+            <p style=" text-align: center; font-family: Arial, Helvetica, sans-serif;">Mr Jomo Sono</p>
+            <p style="font-family: Arial, Helvetica, sans-serif;text-align: center;">Head coach</p>
+        </div>
+    
+        <div class="image1">
+            <img class="image" src="../pictures/gardener.jpg" alt="Image 2"  style="height: 460px;">
+            <p style=" text-align: center; font-family: Arial, Helvetica, sans-serif;">Mr Thapelo Mmushi</p>
+            <p style="text-align: center; font-family: Arial, Helvetica, sans-serif;">General worker</p>
+        </div>
+    
+        <div class="image1">
+            <img class="image" src="../pictures/head-of-security.jpg" alt="Image 3"  style="height: 460px;">
+            <p style=" text-align: center; font-family: Arial, Helvetica, sans-serif;">Mrs Pinky Pilusa</p>
+            <p style="text-align: center; font-family: Arial, Helvetica, sans-serif;">Head of security</p> 
+        </div>
     </div>
-
-
+    <br>
+   
+    
 </body>
 
 <br>
@@ -296,6 +379,8 @@
 
 </script>
 <script src="javascript.js"></script>
+
+
 
  
   

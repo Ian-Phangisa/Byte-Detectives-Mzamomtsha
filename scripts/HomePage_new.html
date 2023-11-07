@@ -10,28 +10,6 @@
     <title>Mozamotsha School</title>
 </head>
 <style>
-    .button-container {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    #prevButton,
-    #nextButton {
-        background-color: #333;
-        color: #fff;
-        padding: 10px 20px;
-        margin: 10px;
-        border: none;
-        cursor: pointer;
-    }
-
-    #prevButton:hover,
-    #nextButton:hover {
-        background-color: black;
-    }
 
     button {
         background-color: #0074D9;
@@ -45,7 +23,75 @@
     button i {
         margin-right: 5px;
     }
+    .why {
+    animation-name: slideIn;
+    animation-duration: 8s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
     
+}
+/* Your existing CSS styles */
+
+.slideshow-container {
+    background-size: cover;
+    position: relative;
+    background-position:center ;
+}
+.slideshow-container img{
+    width: 100%;
+    height: 600px;
+}
+
+
+
+/* style for the transformations*/
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.containerAbout img {
+    animation-name: slideIn;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.para p {
+        animation-name: bounceIn;
+        animation-duration: 1s;
+        animation-delay: 1s; 
+        animation-fill-mode: both;
+    }
+
+    /* Define the bounceIn animation */
+    @keyframes bounceIn {
+        from {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
 </style>
 
 <body>
@@ -72,17 +118,27 @@
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
+        <section class="slideshow">
+            <div class="slideshow-container">
+                <div class="slide fade">
+                    <img src="..//pictures/Black.jpg" alt="Image 1">
+                </div>
+                <div class="slide fade">
+                    <img src="..//pictures/nwana.jpg" alt="Image 2">
+                </div>
+                <div class="slide fade">
+                    <img src="..//pictures/abt.jpg" alt="Image 3">
+                </div>
+            </div>
+              
+        </section>
 
         <div class="Welcome">
             <marquee behavior="scroll" direction="left and right">
                 <h1 id="ss">Welcome to Mzamomtsha Primary School</h1>
             </marquee>
             <p style="color: white;"> Where Excellence Meets Education</p>
-            <div class="button-container">
-                <button id="prevButton" style="float:left;"><i class="fas fa-chevron-left"></i> </button>
-                <button id="nextButton" style="float: right;"><i class="fas fa-chevron-right"></i> </button>
-
-            </div>
+            
         </div>
 
     </section>
@@ -148,9 +204,6 @@
     </section>
     <br>
     <br>
-    <button onclick="topFunction()" id="myBtn" title="Back to Top" style="float: right;  color: white;">
-        <i class="fa fa-chevron-circle-up" aria-hidden="true" style="font-size: 24px;"></i>
-    </button>
     
     
     
@@ -205,12 +258,21 @@
 </body>
 <script src="javascript.js"></script>
 <script>
-    
+    let currentSlide = 0;
 
+    function showSlide(n) {
+        const slides = document.getElementsByClassName('slide');
+        
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+        }
+        
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].style.display = 'block';
+        setTimeout(() => showSlide(currentSlide + 1), 2000); 
+    }
 
-
-
+    showSlide(currentSlide);
 </script>
-
 
 </html>
